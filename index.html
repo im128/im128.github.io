@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Climate Change & Australian Coral Reef Boundary</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- PASSWORD LOCK -->
+<div id="passwordOverlay" class="overlay">
+  <div class="pwdBox">
+    <h2>This page is protected</h2>
+    <input type="password" id="pwdInput" placeholder="Enter Password" />
+    <button onclick="checkPwd()">Submit</button>
+    <p id="pwdError" style="color:red"></p>
+  </div>
+</div>
+
+<div id="mainContent" style="display:none">
+  <header>
+    <h1>Climate Change Effects on the Australian Coral Reef Boundary</h1>
+  </header>
+
+  <div class="container">
+    <!-- SLIDER NAV -->
+    <aside class="sidebar">
+      <input type="range" min="2000" max="2025" value="2000" id="yearSlider" step="1"
+             oninput="updateYearDisplay(this.value)">
+      <p>Selected Year: <span id="yearValue">2000</span></p>
+      <div id="yearTextContainer"></div>
+      <div class="oceanData">
+        <h3>Ocean Data</h3>
+        <p>pH: <span id="oceanPh"></span></p>
+        <p>Temp (K): <span id="oceanTemp"></span></p>
+      </div>
+    </aside>
+
+    <!-- IMAGE DISPLAY -->
+    <main>
+      <div id="imageDisplay"></div>
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
